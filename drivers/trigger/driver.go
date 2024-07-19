@@ -152,7 +152,6 @@ func (d *Driver) Listen(eventsChan *flash.DatabaseEventsChan) error {
 					newData = &typedData
 				}
 				if od, exists := data["old"]; exists && od != nil {
-					fmt.Println(od)
 					typedData := flash.EventData(od.(map[string]any))
 					oldData = &typedData
 				}
